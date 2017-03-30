@@ -33,7 +33,7 @@ import { ArticlesComponent } from './sections/articles/articles.component';
     FormsModule,
     HttpModule,
     MaterialModule,
-    RouterModule.forRoot(routing)
+   routing
   ],
   providers: [],
   bootstrap: [AppComponent]
