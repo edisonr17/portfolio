@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 
@@ -16,6 +17,19 @@ import { MaterialModule } from '@angular/material';
 import { ExperimentsComponent } from './sections/experiments/experiments.component';
 import { AlgoritmsComponent } from './sections/algoritms/algoritms.component';
 import { ArticlesComponent } from './sections/articles/articles.component';
+import { FormGeneratorComponent } from './sections/experiments/form-generator/form-generator.component';
+
+
+// Must export the config
+export const firebaseConfig = {
+    apiKey: "AIzaSyAazx_TSOutGIer0ccHDiNaBv9sUgKxcKU",
+    authDomain: "formgenerator-e67e5.firebaseapp.com",
+    databaseURL: "https://formgenerator-e67e5.firebaseio.com",
+    projectId: "formgenerator-e67e5",
+    storageBucket: "formgenerator-e67e5.appspot.com",
+    messagingSenderId: "621446355770"
+};
+
 
 @NgModule({
   declarations: [
@@ -26,14 +40,19 @@ import { ArticlesComponent } from './sections/articles/articles.component';
     FooterComponentComponent,
     ExperimentsComponent,
     AlgoritmsComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    FormGeneratorComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterialModule,
-   routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig)
+
+  
+
   ],
   providers: [],
   bootstrap: [AppComponent]

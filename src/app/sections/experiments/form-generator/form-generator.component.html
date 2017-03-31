@@ -1,0 +1,11 @@
+<div class="col s6  offset-s3">
+  <h1>Form Generator</h1>
+  <div class='col s12'>
+    <h2>My forms</h2>
+    <ul>
+      <li *ngFor="let item of items | async; let i = index ">
+        <strong>Form name:</strong> {{ item.formName }} {{i}}
+      </li>
+    </ul>
+  </div>
+</div>

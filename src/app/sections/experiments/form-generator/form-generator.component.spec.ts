@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { AlgoritmsComponent } from './algoritms.component';
+import { FormGeneratorComponent } from './form-generator.component';
 
-describe('AlgoritmsComponent', () => {
-  let component: AlgoritmsComponent;
-  let fixture: ComponentFixture<AlgoritmsComponent>;
+describe('FormGeneratorComponent', () => {
+  let component: FormGeneratorComponent;
+  let fixture: ComponentFixture<FormGeneratorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlgoritmsComponent ]
+      declarations: [ FormGeneratorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AlgoritmsComponent);
+    fixture = TestBed.createComponent(FormGeneratorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
